@@ -1,0 +1,36 @@
+/* 清除部分元素的默认内外边距 */
+body, div, dl, dt, dd, ul, li, h1, h2, h3, h4, h5, h6, input, form, a, p, textarea {
+  margin: 0;
+  padding: 0;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+ol, ul, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  /* 个人习惯重置成块级元素 */
+  display: block;
+  color: #fff;
+}
+
+img {
+  border: none;
+  display: block;
+}
+
+/* 清除浮动的另一种写法 */
+.clearfloat::after {
+  display: block;
+  clear: both;
+  content: "";
+  visibility: hidden;
+  height: 0;
+}
+
+/* 兼容IE浏览器 */
+.clearfloat {
+  zoom: 1;
+}
